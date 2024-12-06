@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body, html {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100%;
+            background-color: #333;
+            padding-top: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            text-align: center;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        .main-content {
+            margin-left: 200px;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 50px;
+            background-color: #222;
+        }
+        header h1 {
+            font-size: 50px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            border-bottom: 2px solid #444;
+            padding-bottom: 10px;
+        }
+        .skills-bar {
+            background-color: #444;
+            border-radius: 5px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        .skills-bar span {
+            display: block;
+            background-color: #00bcd4;
+            text-align: right;
+            padding: 5px;
+            color: white;
+        }
+        .project-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .project-card {
+            background-color: #444;
+            padding: 15px;
+            border-radius: 5px;
+            flex: 1 1 calc(33.333% - 15px);
+            box-sizing: border-box;
+        }
+        .project-card img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        form input, form textarea, form button {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        form button {
+            background-color: #00bcd4;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #008c9e;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            margin-top: 20px;
+        }
+        footer a {
+            color: #00bcd4;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+    <!-- Header -->
+    <header id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>I'm [Your Name], a Web Developer and Designer</p>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm [Your Name], a professional web developer with expertise in creating dynamic and visually appealing websites. I specialize in front-end and back-end development, and I’m passionate about turning ideas into reality.</p>
+        <h3>Skills</h3>
+        <div class="skills-bar">
+            <span style="width: 90%;">HTML/CSS - 90%</span>
+        </div>
+        <div class="skills-bar">
+            <span style="width: 85%;">JavaScript - 85%</span>
+        </div>
+        <div class="skills-bar">
+            <span style="width: 75%;">React - 75%</span>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="project1.jpg" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>A brief description of the project goes here.</p>
+            </div>
+            <div class="project-card">
+                <img src="project2.jpg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>A brief description of the project goes here.</p>
+            </div>
+            <div class="project-card">
+                <img src="project3.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>A brief description of the project goes here.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="contact.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 [Your Name]. All Rights Reserved.</p>
+    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+    <a href="https://github.com" target="_blank">GitHub</a>
+</footer>
+
+</body>
+</html>
